@@ -1,5 +1,5 @@
 import streamlit as st
-import pickle5 as pickle
+import pickle
 import pandas as pd
 from unidecode import unidecode
 
