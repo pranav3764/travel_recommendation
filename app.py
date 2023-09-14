@@ -8,7 +8,7 @@ st.title('Interactive Text Input Example')
 cust_id = st.text_input('Enter Customer ID:')
 datee = st.text_input('Enter Date:')
 
-df = pd.read_csv(r'./Online_Retail.csv')
+df = pd.read_csv(r'Online_Retail.csv')
 
 df['detailed_description'] = np.nan
 for i in range(df['Description'].size):
