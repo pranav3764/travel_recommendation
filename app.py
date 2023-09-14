@@ -13,10 +13,7 @@ dfb = pd.read_csv(r'data2.csv')
 dfc = pd.read_csv(r'data3.csv')
 df = pd.concat([dfa, dfb, dfc])
 
-df['detailed_description'] = np.nan
-for i in range(df['Description'].size):
-    if str(df['Description'][i]) != 'nan':
-        df['detailed_description'][i] = " ".join(df['Description'][i].split(' ')[-2:])
+df['detailed_description'] = df['Description'].apply(lambda x: ' '.join(str(x).split(" ")[-2:]))
 
 df['date'] = df['InvoiceDate'].apply(lambda x: x.split(" ")[0])
 df['InvoiceNo'] = pd.to_numeric(df['InvoiceNo'], errors='coerce')
