@@ -8,7 +8,10 @@ st.title('Interactive Text Input Example')
 cust_id = st.text_input('Enter Customer ID:')
 datee = st.text_input('Enter Date:')
 
-df = pd.read_csv(r'Online_Retail.csv')
+dfa = pd.read_csv(r'data1.csv')
+dfb = pd.read_csv(r'data2.csv')
+dfc = pd.read_csv(r'data3.csv')
+df = pd.concat([dfa, dfb, dfc])
 
 df['detailed_description'] = np.nan
 for i in range(df['Description'].size):
