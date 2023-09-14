@@ -51,4 +51,4 @@ else:
     ans = case4(cust_id, datee)
     
 if st.button('Suggest'):
-    st.write(f'You entered: {ans}')
+    st.write(f'Well!! I recommend {ans}')
