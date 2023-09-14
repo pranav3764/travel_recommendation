@@ -34,7 +34,7 @@ def case2(id, date):
     occurence_count = Counter(df2[df2['date'] == date]['detailed_description'])
     return occurence_count.most_common(1)[0][0]
 def case3(id, date):
-    occurence_count = Counter(df2[df2['CustomerID'] == id]['detailed_description'])
+    occurence_count = Counter(df2[df2['CustomerID'] == float(id)]['detailed_description'])
     return occurence_count.most_common(1)[0][0]
 def case4(id, date):
     occurence_count = Counter(df2['detailed_description'])
