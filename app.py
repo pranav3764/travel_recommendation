@@ -53,4 +53,5 @@ elif cust_id in ids and datee not in dates:
 else:
     ans = case4(cust_id, datee)
     
-st.write(f'You entered: {ans}')
+if st.button('Suggest'):
+    st.write(f'You entered: {ans}')
