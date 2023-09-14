@@ -3,7 +3,7 @@ import numpy as np
 import streamlit as st
 from collections import Counter
 
-st.title('Interactive Text Input Example')
+st.title('Item Recommendation')
 
 cust_id = st.text_input('Enter Customer ID:')
 datee = st.text_input('Enter Date:')
