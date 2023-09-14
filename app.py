@@ -41,14 +41,15 @@ def case4(id, date):
     return occurence_count.most_common(1)[0][0]
 
 
-if cust_id in ids and datee in dates:
-    ans = case1(cust_id, datee)
-elif cust_id not in ids and datee in dates:
-    ans = case2(cust_id, datee)
-elif cust_id in ids and datee not in dates:
-    ans = case3(cust_id, datee)
-else:
-    ans = case4(cust_id, datee)
+
     
 if st.button('Suggest'):
+    if cust_id in ids and datee in dates:
+        ans = case1(cust_id, datee)
+    elif cust_id not in ids and datee in dates:
+        ans = case2(cust_id, datee)
+    elif cust_id in ids and datee not in dates:
+        ans = case3(cust_id, datee)
+    else:
+        ans = case4(cust_id, datee)
     st.write(f'Well!! I recommend {ans}')
